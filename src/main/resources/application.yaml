@@ -1,0 +1,13 @@
+---
+spring:
+  application:
+    name: Randi
+
+ingest-token: ~
+humio-url: https://cloud.humio.com
+
+backfill:
+  days: 7
+  daily-amount: 64
+  random:
+    event-length: 512
