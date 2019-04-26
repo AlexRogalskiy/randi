@@ -61,7 +61,7 @@ public class RandiApplication {
                     log.info("Total messages exceeded");
                     return null;
                 }
-                return firstEventTime + ((Duration.ofDays(backfillDays).toMillis() / totalMessages) * count);
+                return Math.round(firstEventTime + ((Duration.ofDays(backfillDays).toMillis() * ((double) count/totalMessages))));
             }
 
             @Override
